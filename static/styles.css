@@ -1,0 +1,14 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+  }
+  
+  section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+  
+  a {
+    transition: all 0.3s ease;
+  }
+  
