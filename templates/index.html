@@ -42,12 +42,24 @@
   </header>
 
   <!-- Intro -->
-  <section class="text-center my-10">
-    <h1 class="text-4xl font-bold">Hi, my name is</h1>
-    <h2 class="text-3xl font-bold text-blue-600 mt-2">Aman Kumar Pandey</h2>
-    <p class="mt-4 text-lg max-w-2xl mx-auto">
-      I have built many industry grade projects from scratch and am armed with many technological skills useful for tech projects. Check out my projects below. :)
-    </p>
+  <section class="my-10 max-w-6xl mx-auto px-4">
+    <div class="flex flex-col md:flex-row items-center md:items-start gap-10">
+      
+      <!-- Left Text -->
+      <div class="md:w-1/2 text-center md:text-left">
+        <h1 class="text-4xl font-bold">Hi, my name is</h1>
+        <h2 class="text-3xl font-bold text-blue-600 mt-2">Aman Kumar Pandey</h2>
+        <p class="mt-4 text-lg">
+          I'm a DevOps Engineer who enjoys automation, continuous integration, and deployment. With hands-on experience in DevOps and Cloud Computing, I am proficient in various tools and technologies related to infrastructure automation, containerization, cloud platforms, monitoring and logging, and CI/CD. My ultimate objective is to assist organizations in achieving quicker, more effective software delivery while maintaining high levels of quality and dependability. Check out my projects below. :)
+        </p>
+      </div>
+  
+      <!-- Right Profile Image -->
+      <div class="md:w-1/2 flex justify-center">
+        <img src="{{ url_for('static', filename='profile.jpg') }}" alt="Profile Photo" class="w-64 h-64 object-cover rounded-full shadow-lg border-4 border-blue-500">
+      </div>
+  
+    </div>
   </section>
 
   <!-- Skills -->
@@ -58,7 +70,8 @@
     <div><i class="fas fa-server text-blue-600"></i><div>DevOps</div></div>
     <div><i class="fas fa-cloud text-indigo-500"></i><div>AWS</div></div>
     <div><i class="fab fa-linux text-gray-700"></i><div>Linux</div></div>
-    <div><i class="fab fa-git-alt text-orange-600"></i><div>Git</div></div>
+    <!-- <div><i class="fab fa-git-alt text-orange-600"></i><div>Git</div></div> -->
+    <div><i class="fab fa-git-alt text-orange-600"></i><div>GitHub</div></div>
     <div><i class="fas fa-code-branch text-green-600"></i><div>Terraform</div></div>
     <div><i class="fab fa-jenkins text-red-600"></i><div>Jenkins</div></div>
     <div><i class="fas fa-cogs text-blue-700"></i><div>Ansible</div></div>
