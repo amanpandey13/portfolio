@@ -90,19 +90,119 @@
 
 
   <!-- Projects -->
-  <section id="projects" class="py-10">
-    <h2 class="text-2xl font-bold mb-4 text-center">Projects</h2>
-    <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-      <div class="p-4 border rounded shadow">
-        <h3 class="text-xl font-semibold">Project 1</h3>
-        <p class="text-sm mt-2">Description about project 1.</p>
-      </div>
-      <div class="p-4 border rounded shadow">
-        <h3 class="text-xl font-semibold">Project 2</h3>
-        <p class="text-sm mt-2">Description about project 2.</p>
-      </div>
-    </div>
-  </section>
+<section class="bg-gray-100 dark:bg-gray-900 py-10" id="projects">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center mb-8 text-gray-900 dark:text-white flex items-center justify-center gap-2">
+      <img src="{{ url_for('static', filename='masterwiz_logo.png') }}" alt="Masterwiz Logo" class="inline w-6 h-6" /> Masterwiz technologies Projects
+    </h2>
+   
+    
+
+
+    <div class="grid md:grid-cols-2 gap-6">
+
+      <!-- Project 1: MyMaster11 -->
+<div class="bg-white dark:bg-gray-800 rounded-lg shadow p-6 hover:shadow-lg transition">
+  <h3 class="text-xl font-semibold text-blue-600 mb-2 flex items-center gap-2">
+    <img src="{{ url_for('static', filename='mymaster11_logo.png') }}" alt="MyMaster11 Logo" class="inline w-6 h-6" />
+    MyMaster11
+  </h3>
+  <p class="text-gray-700 dark:text-gray-300 mb-4">
+    MyMaster11 is a fantasy sports platform where I led the complete infrastructure and DevOps lifecycle to ensure high availability, scalability, and security of all services.
+  </p>
+  <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 text-sm space-y-1">
+    <li><strong>Infrastructure Management:</strong> Deployed and managed EC2 instances for Admin, Application, and Auto Scaling environments with isolated setups.</li>
+    <li><strong>Database Management:</strong> Administered Amazon RDS (MySQL) and executed a zero-downtime upgrade from MySQL 5.7 to 8.0 using a Blue-Green Deployment strategy.</li>
+    <li><strong>Caching & Performance:</strong> Configured Amazon ElastiCache (Redis) to improve performance and reduce DB load.</li>
+    <li><strong>Scalability & High Availability:</strong> Enabled Auto Scaling Groups based on CPU and memory thresholds. Ensured high availability using Multi-AZ RDS and ELB.</li>
+    <li><strong>Security & Monitoring:</strong> Secured applications using AWS WAF and enabled CloudWatch for monitoring and real-time alerts.</li>
+    <li><strong>Networking & Routing:</strong> Configured Amazon Route 53 with DNS routing and health checks. Integrated API Gateway for secured API management.</li>
+    <li><strong>Storage & Backup:</strong> Used Amazon S3 for backups, static files, and media with versioning and lifecycle policies for optimized cost management.</li>
+  </ul>
+  <p class="mt-4 text-green-500 font-medium">
+    🔁 Key Achievement: Seamlessly migrated production database from MySQL 5.7 to 8.0 with zero downtime using Blue-Green deployment.
+  </p>
+</div>
+
+
+      <!-- Project 2 -->
+<div class="bg-white dark:bg-gray-800 rounded-lg shadow p-6 hover:shadow-lg transition">
+  <h3 class="text-xl font-semibold text-blue-600 mb-2 flex items-center gap-2">
+    <i class="fas fa-comments"></i> Opinion
+  </h3>
+  <p class="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
+    
+    Opinio is a real-time application platform built for high-concurrency environments with a focus on performance, scalability, and fault tolerance. I was responsible for designing and maintaining the cloud infrastructure, CI/CD pipelines, application support, and cost optimization across the DevOps lifecycle.
+    <br /><br />
+
+    <strong>Responsibilities:</strong><br />
+
+    ✅ <u>Compute & Server Management:</u><br />
+    • Deployed and managed EC2 instances for Admin, Application, and WebSocket services.<br />
+    • Implemented Auto Scaling Groups to handle dynamic workloads efficiently.<br />
+    • Integrated Supervisor to manage background processes and Cron for scheduled tasks.<br /><br />
+
+    ✅ <u>Database & Caching:</u><br />
+    • Managed Amazon RDS Aurora (MySQL) for scalable and high-performance relational data handling.<br />
+    • Optimized MySQL queries using advanced indexing techniques.<br />
+    • Integrated ElastiCache (Redis) for caching frequent queries and reducing DB load.<br />
+    • Managed MongoDB on EC2 for flexible NoSQL data storage.<br />
+    • Administered RabbitMQ for message queuing between microservices.<br /><br />
+
+    ✅ <u>Security & Performance:</u><br />
+    • Applied secure configurations using Security Groups, IAM Roles, and SSL certificates.<br />
+    • Enabled CloudWatch monitoring with alarms for anomaly detection and performance tuning.<br /><br />
+
+    ✅ <u>Networking & Routing:</u><br />
+    • Configured Amazon Route 53 for efficient DNS routing and traffic management.<br /><br />
+
+    ✅ <u>Storage & Data Handling:</u><br />
+    • Used Amazon S3 for storing application logs, user uploads, and periodic backups.<br />
+    • Implemented lifecycle policies for cost-effective data retention.<br /><br />
+
+    <strong>Key Achievement:</strong><br />
+    🚀 Successfully optimized MySQL query performance using advanced indexing, reducing response times significantly during high user traffic.
+  </p>
+</div>
+
+
+      <!-- Project 3 -->
+<div class="bg-white dark:bg-gray-800 rounded-lg shadow p-6 hover:shadow-lg transition">
+  <h3 class="text-xl font-semibold text-blue-600 mb-2 flex items-center gap-2">
+    <img src="{{ url_for('static', filename='SportsWiz_logo.png') }}" alt="Masterwiz Logo" class="inline w-6 h-6" /> SportsWiz
+  </h3>
+  <p class="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
+    
+    SportsWiz is a lightweight, cost-efficient infrastructure platform designed to host internal web services with high availability and automated DevOps practices. The project emphasizes minimal resource usage, operational efficiency, and strong AWS-native integration with automation via Bash scripting.
+    <br /><br />
+
+    <strong>Responsibilities:</strong><br />
+
+    ✅ <u>Infrastructure & Service Management:</u><br />
+    • Managed a single EC2 instance hosting web services, Redis caching, and background workers.<br />
+    • Provisioned and maintained Amazon RDS for backend data storage.<br />
+    • Configured Amazon VPC with secure subnets, route tables, and security groups to ensure isolated networking.<br /><br />
+
+    ✅ <u>Monitoring & Optimization:</u><br />
+    • Implemented Amazon CloudWatch for system monitoring with custom metrics (CPU, memory, disk).<br />
+    • Applied continuous cost monitoring by identifying idle resources, stopping unused services, and using reserved instances where applicable.<br /><br />
+
+    ✅ <u>Automation:</u><br />
+    • Developed Bash scripts to automate recurring operations such as backups, deployments, log rotations, and cleanup tasks.<br />
+    • Reduced manual interventions by incorporating automation into daily operational workflows.<br /><br />
+
+    ✅ <u>Caching & Storage:</u><br />
+    • Configured Redis on the EC2 instance to enhance response times through in-memory caching.<br />
+    • Utilized Amazon S3 for storing application logs, periodic backups, and static content with access policies and lifecycle rules.<br /><br />
+
+    <strong>Key Achievement:</strong><br />
+    💡 Delivered a highly efficient, single-instance infrastructure model that balanced performance and cost, leveraging AWS-native services and custom scripting for full-stack automation.
+  </p>
+</div>
+</section>
+
+
+  
 
   <!-- GitHub Section -->
   <section id="github" class="bg-gray-100 dark:bg-gray-700 text-center py-10">
