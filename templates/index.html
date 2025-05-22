@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aman Kumar Pandey - Portfolio</title>
+  <title>Portfolio - Aman Pandey</title>
   <link rel="icon" type="image/png" href="{{ url_for('static', filename='title-icon.png') }}">
   
   <!-- Tailwind CSS -->
@@ -43,7 +43,7 @@
     
     <a href="#blog" class="text-gray-900 dark:text-white hover:underline">Blog</a>
     <a href="#contact" class="text-gray-900 dark:text-white hover:underline">Contact</a>
-    <a href="{{ url_for('static', filename='Aman Pandey_3+ Years_AWS_DevOps_Resume.pdf') }}" target="_blank" class="text-gray-900 dark:text-white hover:underline">Resume</a>
+    <a href="#resume" class="text-gray-900 dark:text-white hover:underline">Resume</a>
 
   </nav>
   <div class="flex gap-4 items-center">
@@ -69,13 +69,6 @@
         <p class="mt-4 text-lg">
           
           I'm a DevOps Engineer who enjoys automation, continuous integration, and deployment. With hands-on experience in DevOps and Cloud Computing, I am proficient in various tools and technologies related to infrastructure automation, containerization, cloud platforms, monitoring and logging, and CI/CD. My ultimate objective is to assist organizations in achieving quicker, more effective software delivery while maintaining high levels of quality and dependability. Check out my projects below. :)
-
-          <div class="mt-6">
-            <a href="{{ url_for('static', filename='Aman Pandey_3+ Years_AWS_DevOps_Resume.pdf') }}" target="_blank" 
-               class="inline-block px-6 py-2 border border-blue-500 text-blue-500 dark:text-white dark:border-white rounded hover:bg-blue-500 hover:text-white transition duration-300">
-              <i class="fas fa-download mr-2"></i>Download Resume
-            </a>
-          </div>
 
         </p>
       </div>
@@ -131,8 +124,7 @@
       <!-- Project 1: MyMaster11 -->
 <div class="bg-white dark:bg-gray-800 rounded-lg shadow p-6 hover:shadow-lg transition">
   <h3 class="text-xl font-semibold text-blue-600 mb-2 flex items-center gap-2">
-    <img src="{{ url_for('static', filename='mymaster11_logo.png') }}" alt="MyMaster11 Logo" class="inline w-6 h-6 bg-gray-800 rounded p-1"" />
-    MyMaster11
+    <img src="{{ url_for('static', filename='mymaster11_logo.png') }}" alt="MyMaster11 Logo" class="inline w-6 h-6 bg-gray-800 rounded p-1" /> MyMaster11
   </h3>
   <p class="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
     MyMaster11 is a fantasy sports platform where I led the complete infrastructure and DevOps lifecycle to ensure high availability, scalability, and security of all services.
@@ -290,8 +282,6 @@
 </div>
 
 </section>
-
-
   
 
   <!-- GitHub Section -->
@@ -312,9 +302,6 @@
     
   </div>
 </section>
-
-<!-- Resume Section -->
-
 
 
 
@@ -392,6 +379,26 @@
   </section>
   
   
+  <!-- Resume Section -->
+
+  <section id="resume" class="pt-28 pb-16 bg-gray-100 dark:bg-gray-800">
+  <div class="max-w-4xl mx-auto px-4 text-center">
+    <h2 class="text-3xl font-bold mb-6 text-gray-900 dark:text-white">Resume</h2>
+    
+    <!-- Resume Download Button -->
+    <a href="{{ url_for('static', filename='Aman Pandey_3+ Years_AWS_DevOps_Resume.pdf') }}" 
+       target="_blank" 
+       class="inline-block px-6 py-2 mb-6 border border-blue-500 text-blue-500 dark:text-white dark:border-white rounded hover:bg-blue-500 hover:text-white transition duration-300">
+      <i class="fas fa-download mr-2"></i>Download Resume PDF
+    </a>
+
+    <!-- Embedded Resume Image -->
+    <img src="{{ url_for('static', filename='Aman_Pandey_Resume_Page1.png') }}"
+         alt="Aman Pandey Resume"
+         class="rounded-lg shadow-lg w-full max-w-3xl mx-auto border border-gray-300 dark:border-gray-700" />
+  </div>
+</section>
+
   
 
   <script>
@@ -420,9 +427,6 @@
     });
   });
 </script>
-
-  
-  
 
 </body>
 </html>
