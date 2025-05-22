@@ -39,10 +39,11 @@
     <!-- <a href="https://github.com/amanpandey13" target="_blank" class="hover:underline text-white">
       <i class="fab fa-github mr-1"></i>GitHub
     </a> -->
-
+    
     <a href="#blog" class="text-gray-900 dark:text-white hover:underline">Blog</a>
     <a href="#contact" class="text-gray-900 dark:text-white hover:underline">Contact</a>
-    
+    <a href="{{ url_for('static', filename='Aman Pandey_3+ Years_AWS_DevOps_Resume.pdf') }}" target="_blank" class="text-gray-900 dark:text-white hover:underline">Resume</a>
+
   </nav>
   <div class="flex gap-4 items-center">
     <a href="https://github.com/amanpandey13" target="_blank" class="text-2xl"><i class="fab fa-github"></i></a>
@@ -65,7 +66,16 @@
         <h1 class="text-4xl font-bold">Hi, my name is</h1>
         <h2 class="text-3xl font-bold text-blue-600 mt-2">Aman Kumar Pandey</h2>
         <p class="mt-4 text-lg">
+          
           I'm a DevOps Engineer who enjoys automation, continuous integration, and deployment. With hands-on experience in DevOps and Cloud Computing, I am proficient in various tools and technologies related to infrastructure automation, containerization, cloud platforms, monitoring and logging, and CI/CD. My ultimate objective is to assist organizations in achieving quicker, more effective software delivery while maintaining high levels of quality and dependability. Check out my projects below. :)
+
+          <div class="mt-6">
+            <a href="{{ url_for('static', filename='Aman Pandey_3+ Years_AWS_DevOps_Resume.pdf') }}" target="_blank" 
+               class="inline-block px-6 py-2 border border-blue-500 text-blue-500 dark:text-white dark:border-white rounded hover:bg-blue-500 hover:text-white transition duration-300">
+              <i class="fas fa-download mr-2"></i>Download Resume
+            </a>
+          </div>
+
         </p>
       </div>
   
@@ -301,6 +311,10 @@
     
   </div>
 </section>
+
+<!-- Resume Section -->
+
+
 
 
   <!-- Blog Section -->
