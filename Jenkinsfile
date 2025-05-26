@@ -7,9 +7,18 @@ pipeline {
     }
 
     stages {
+        stage('Install System Dependencies') {
+            steps {
+                sh '''
+                sudo apt-get update
+                sudo apt-get install -y python3-venv
+                '''
+            }
+        }
+
         stage('Clone Repo') {
             steps {
-                 git branch: 'main', url: 'https://github.com/amanpandey13/portfolio.git'
+                git branch: 'main', url: 'https://github.com/amanpandey13/portfolio.git'
             }
         }
 
