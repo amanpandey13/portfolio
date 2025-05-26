@@ -18,32 +18,36 @@ pipeline {
 
         stage('Clone Repo') {
             steps {
-                git branch: 'main', url: 'https://github.com/amanpandey13/portfolio.git'
+                sh '''
+                rm -rf $APP_DIR
+                git clone -b main https://github.com/amanpandey13/portfolio.git $APP_DIR
+                '''
             }
         }
 
-        stage('Install Dependencies') {
+        stage('Install Python Dependencies') {
             steps {
                 sh '''
+                cd $APP_DIR
                 python3 -m venv venv
                 source venv/bin/activate
                 pip install --upgrade pip
                 pip install -r requirements.txt
+                pip install gunicorn
                 '''
             }
         }
 
         stage('Stop Old Gunicorn') {
             steps {
-                sh '''
-                pkill gunicorn || true
-                '''
+                sh 'pkill gunicorn || true'
             }
         }
 
         stage('Start Gunicorn') {
             steps {
                 sh '''
+                cd $APP_DIR
                 source venv/bin/activate
                 nohup gunicorn -w 4 -b 0.0.0.0:5001 app:app &
                 '''
