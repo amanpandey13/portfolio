@@ -71,9 +71,9 @@ pipeline {
     agent any
 
     environment {
-        APP_DIR = "/var/www/html/flask-portfolio"
-        VENV_DIR = "$APP_DIR/venv"
-    }
+    APP_DIR = "/var/lib/jenkins/workspace/flask-portfolio"
+    VENV_DIR = "$APP_DIR/venv"
+}
 
     stages {
         stage('Clone Repository') {
