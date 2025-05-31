@@ -71,7 +71,7 @@ pipeline {
     agent any
 
     environment {
-        APP_DIR = "/var/www/html/flask_app"
+        APP_DIR = "/var/www/html/flask-portfolio"
         VENV_DIR = "${APP_DIR}/venv"
     }
 
