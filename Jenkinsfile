@@ -78,7 +78,7 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git branch: 'main', url: 'https://github.com/amanpandey13/portfolio/tree/demo'
+                git branch: 'demo', url: 'https://github.com/amanpandey13/portfolio.git'
             }
         }
 
