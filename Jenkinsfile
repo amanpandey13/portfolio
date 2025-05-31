@@ -72,7 +72,7 @@ pipeline {
 
     environment {
         APP_DIR = "/var/www/html/flask-portfolio"
-        VENV_DIR = "${APP_DIR}/venv"
+        VENV_DIR = "$APP_DIR/venv"
     }
 
     stages {
@@ -84,22 +84,22 @@ pipeline {
 
         stage('Setup Python Environment') {
             steps {
-                sh """
-                python3 -m venv ${VENV_DIR}
-                source ${VENV_DIR}/bin/activate
-                pip install --upgrade pip
-                pip install -r requirements.txt
-                """
+                sh '''
+                    python3 -m venv $VENV_DIR
+                    source $VENV_DIR/bin/activate
+                    pip install --upgrade pip
+                    pip install -r requirements.txt
+                '''
             }
         }
 
         stage('Run Gunicorn Server') {
             steps {
-                sh """
-                pkill gunicorn || true
-                source ${VENV_DIR}/bin/activate
-                nohup gunicorn -w 4 -b 0.0.0.0:5001 app:app > gunicorn.log 2>&1 &
-                """
+                sh '''
+                    pkill gunicorn || true
+                    source $VENV_DIR/bin/activate
+                    nohup gunicorn -w 4 -b 0.0.0.0:5001 app:app > gunicorn.log 2>&1 &
+                '''
             }
         }
     }
